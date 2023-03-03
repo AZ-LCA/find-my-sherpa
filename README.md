@@ -60,6 +60,10 @@ This resource will be another resource Destiny 2 players can use to look for She
 - As a user, I want to link my bungie account to my website account
 - As a user I want to chat about pve and pvp in separate chatrooms
 
+## Preliminary ERD
+
+https://lucid.app/lucidchart/565c4430-ad04-4401-96f4-2acb715fbf21/edit?view_items=lPeCDaTz5qdc&invitationId=inv_db0a2e3f-3c4f-47c1-816e-009b6e01cac0
+
 ## Basic Wireframe
 
 https://www.figma.com/file/U1sJ0bPUjs9REx690XzZ7x/Untitled?node-id=0%3A3&t=VJNvI0aefaWdH88Y-0
