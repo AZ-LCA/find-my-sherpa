@@ -1,7 +1,9 @@
 <h1>SHERPA</h1>
 
 <% if user_signed_in? %>
-<%= link_to "View Profile Details",  pages_profile_path, class: "link_ul"%>
+<%= link_to "Profile Details",  pages_profile_path, class: "link_ul"%>
+&nbsp;|&nbsp;
+<%= link_to "Sherpa Listings", pages_main_path, class: "link_ul"%>
 <% end %>
 
 <br>
