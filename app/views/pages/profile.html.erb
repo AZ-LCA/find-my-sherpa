@@ -1,0 +1,9 @@
+<h1>Profile</h1>
+<%= link_to "Return", pages_home_path, class: "link_ul" %>
+<p>Username: <%=current_user.username%></p>
+<br>
+<p>Email: <%=current_user.email%></p>
+<br>
+<p>Will add a bio in a future Update</p>
+
+<%=link_to "Edit User", edit_user_registration_path, class: "link_ul"%>
