@@ -3,3 +3,26 @@
 <%= link_to "Return", pages_home_path, class: "link_ul" %>
 &nbsp;|&nbsp;
 <%= link_to "Profile Details", pages_profile_path, class: "link_ul" %>
+<br/>
+<br/>
+<% if current_user.sherpa == true %>
+<%= link_to "New post", new_post_path, class: "link_ul" %>
+<% end %>
+<%= form_with(url: pages_main_path, method: :get, data: {turbo_frame: "pages"}) do |form| %>
+
+  <%= form.label :query, "Search by activity name:" %>
+  <div>
+    <%= form.select :query, options_for_select(["King's Fall", 'Vault Of Glass', 'Vow of the Disciple', 'Deep Stone Crypt', 'Garden of Salvation', "Last Wish", "Spire of the Watcher", 'Duality', 'Grasp of Avarice', 'Prophecy', 'Pit of Heresy', 'Shattered Throne' ]) %>
+
+    <%= form.submit 'Search' %>
+  </div>
+<% end %>
+<div id="post">
+    <% @posts.each do |post| %>
+        <%= render "posts/post", post: post, username: @users.find(post.user_id).username %>
+        <p>
+            <%= link_to "Details", post, class: "link_ul" %>
+        </p>
+    <% end %>
+</div>
+

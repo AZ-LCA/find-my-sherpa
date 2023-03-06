@@ -1,0 +1,11 @@
+<h1>Post Details</h1>
+
+<%= link_to "Back To Sherpa Listings", pages_main_path, class: "link_ul"%>
+
+<%= render "post", post: @post, username: @user %>
+
+<% if current_user.username == @user %>
+
+<%= link_to "Edit Post", edit_post_path, class: "link_ul" %>
+
+<% end %>

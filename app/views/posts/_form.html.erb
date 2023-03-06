@@ -1,0 +1,28 @@
+<%= form_with(model: post) do |form|%>
+  <br/>
+  <% if post.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+    <%= form.text_field :user_id, type: "hidden", value: current_user.id%>
+  </div>
+  <div>
+    <%= form.label :activity, style: "display: block"%>
+    <%= form.select :activity, options_for_select(["King's Fall", 'Vault Of Glass', 'Vow of the Disciple', 'Deep Stone Crypt', 'Garden of Salvation', "Last Wish", "Spire of the Watcher", 'Duality', 'Grasp of Avarice', 'Prophecy', 'Pit of Heresy', 'Shattered Throne' ])%>
+  </div>
+  <div>
+    <%= form.label :info, style: "display: block"%>
+    <%= form.text_field :info%>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

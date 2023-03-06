@@ -1,0 +1,10 @@
+<h1>Edit Post</h1>
+
+<%= link_to "Back To Post Details", post_path(@post), class: "link_ul"%>
+<br/>
+<%= render "form", post: @post %>
+<br>
+<%= button_to "Delete post", post_path(@post), class: "button", data: { 
+  confirm: "Are you sure?", turbo_confirm: "Are you sure?" 
+  }, method: :delete 
+%>

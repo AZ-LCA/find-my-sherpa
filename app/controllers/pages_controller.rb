@@ -3,6 +3,12 @@ class PagesController < ApplicationController
     def home
     end
     def main
+        @users = User.all
+        if params[:query].present?
+            @posts = Post.where("activity LIKE ?", "%#{params[:query]}%")
+          else
+            @posts = Post.all
+          end
     end
     def profile
     end

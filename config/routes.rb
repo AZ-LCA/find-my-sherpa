@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'pages/edit_user'
   root 'pages#home'
   get 'pages/profile'
+  resources :posts
   # Defines the root path route ("/")
   # root "articles#index"
 end
