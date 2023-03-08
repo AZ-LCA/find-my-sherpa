@@ -1,11 +1,11 @@
-<h1>SHERPA</h1>
-
+<h1 class = "header" >FIND MY SHERPA</h1>
+<div class = "directory" >
 <% if user_signed_in? %>
 <%= link_to "Profile Details",  pages_profile_path, class: "link_ul"%>
 &nbsp;|&nbsp;
 <%= link_to "Sherpa Listings", pages_main_path, class: "link_ul"%>
 <% end %>
-
+</div>
 <br/>
 
-<p>Welcome! <br/><br/><br/> This website is made for Destiny 2. Find sherpas willing to go through specific dungeons and raids!</p>
+<p class = "description" >Welcome! <br/><br/><br/> This website is made for Destiny 2. Find sherpas willing to go through specific dungeons and raids!</p>
