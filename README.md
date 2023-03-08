@@ -31,10 +31,9 @@ This resource will be another resource Destiny 2 players can use to look for She
 - User sign up / sign in
 - User editing details
 - User deletion
-- User roles (Sherpa, Casual Player, Blueberry) (SELF ASSIGNED)
+- User roles (Sherpa or Not) (SELF ASSIGNED)
 - Filter search system for specific dungeons and raids
-- Filter search system for vibe (Casual, Fast-Paced, Involved Sherpa, Backseat Sherpa)
-- Creating a ticket to play the raid / dungeon with the sherpa
+- Creating a comment on posts to express interest of ask questions
 - Only sherpas can post (dungeon/raid and vibe + sherpa type)
 
 ## Post MVP
@@ -42,7 +41,7 @@ This resource will be another resource Destiny 2 players can use to look for She
 - Potentially link to Bungie API
 - Potentially give users a bio where they can link their in game username, light level etc
 - Add GM and trials carries
-- Add a chatboard to discuss endgame meta (one for pve and one for pvp)
+- Add a chatboard to discuss endgame meta (one for pve and one for pvp OR just one for pve)
 
 ## User Stories
 
