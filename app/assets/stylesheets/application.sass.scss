@@ -1,40 +1,54 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
 body {
     font-family: "Exo 2", sans-serif;
     color: #C8C8C8;
     background-color: #0E0E0E;
-  }
-  
-  h1 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
     font-weight: 600;
-  }
-  
-  .link {
+}
+
+.link {
     text-decoration: none;
     color: #C8C8C8;
-  }
-  
-  .link_ul {
+}
+
+.link_ul {
     color: #C8C8C8;
-  }
-  
-  .button {
+}
+
+.button {
     background-color: #C8C8C8;
     color: #0E0E0E;
     padding: 6px;
     border-radius: 6px;
     margin: 10px 0px;
-  }
-  
-  .field {
-    margin: 10px 0px;
-  }
-.header {
-    font-size: 48;
-    font-style: italic;
-}  
-.directory {
-
 }
-.description {
 
+.field {
+    margin: 10px 0px;
+}
+
+.header {
+    margin: 20px 10px 8px 10px;
+    font-size: 68;
+}
+
+.box-format {
+    padding: 32px 28px 4px 28px;
+
+    border-radius: 6px;
 }

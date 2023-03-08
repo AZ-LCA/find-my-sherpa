@@ -1,11 +1,20 @@
-<h1 class = "header" >FIND MY SHERPA</h1>
-<div class = "directory" >
+<div class = "page-header header" >
+<h1>HOME</h1>
+</div>
+<hr class="my-4">
+<br/>
+<div class = "navbar justify-content-start h4 mx-2" >
 <% if user_signed_in? %>
-<%= link_to "Profile Details",  pages_profile_path, class: "link_ul"%>
+<%= link_to "Profile Details",  pages_profile_path, class: "link"%>
 &nbsp;|&nbsp;
-<%= link_to "Sherpa Listings", pages_main_path, class: "link_ul"%>
+<%= link_to "Sherpa Listings", pages_main_path, class: "link"%>
 <% end %>
 </div>
 <br/>
-
-<p class = "description" >Welcome! <br/><br/><br/> This website is made for Destiny 2. Find sherpas willing to go through specific dungeons and raids!</p>
+<br/>
+<div class="jumbotron mx-2 jumbotron-fluid bg-dark box-format">
+<pre class="chroma">
+<p class = "display-4" >Welcome!</p>
+<p class = "lead" >This website is made for Destiny 2.<br/><br/>Find sherpas willing to go through specific dungeons and raids!</p>
+</pre>
+</div>
