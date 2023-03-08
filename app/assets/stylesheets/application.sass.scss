@@ -1,26 +1,31 @@
-// Entry point for your Sass build
 body {
-    font-family: 'Exo 2', sans-serif;
+    font-family: "Exo 2", sans-serif;
     color: #C8C8C8;
     background-color: #0E0E0E;
-}
-h1 {
+  }
+  
+  h1 {
     font-weight: 600;
-}
-.link {
+  }
+  
+  .link {
     text-decoration: none;
     color: #C8C8C8;
-}
-.link_ul {
+  }
+  
+  .link_ul {
     color: #C8C8C8;
-}
-.button {
+  }
+  
+  .button {
     background-color: #C8C8C8;
     color: #0E0E0E;
     padding: 6px;
     border-radius: 6px;
     margin: 10px 0px;
-}
-.field {
+  }
+  
+  .field {
     margin: 10px 0px;
-}
+  }
+  

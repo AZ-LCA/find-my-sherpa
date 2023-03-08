@@ -9,3 +9,12 @@
 <%= link_to "Edit Post", edit_post_path, class: "link_ul" %>
 
 <% end %>
+<h2>Comments:</h2>
+<% @comments.each do |comment| %>
+<% if comment.user_id != nil %>
+<%= render "comments/comment", comment: comment, username: @allUsers.find(comment.user_id).username  %>
+<% end %>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
