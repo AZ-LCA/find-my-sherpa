@@ -1,28 +1,54 @@
+<div class = "page-header header" >
 <h1>SHERPA LISTINGS</h1>
-
+</div>
+<hr class="my-4">
+<br/>
+<div class = "navbar justify-content-start h4 mx-2" >
 <%= link_to "Return", pages_home_path, class: "link_ul" %>
 &nbsp;|&nbsp;
 <%= link_to "Profile Details", pages_profile_path, class: "link_ul" %>
+</div>
 <br/>
 <br/>
+<div class= "container-fluid">
 <% if current_user.sherpa == true %>
-<%= link_to "New post", new_post_path, class: "link_ul" %>
+<%= link_to "New post", new_post_path, class: "h4 link_ul" %>
 <% end %>
+<br/>
+<br/>
 <%= form_with(url: pages_main_path, method: :get, data: {turbo_frame: "pages"}) do |form| %>
 
-  <%= form.label :query, "Search by activity name:" %>
+  <%= form.label :query, "Search by activity name:", class: "h4" %>
+  <br/>
+  <br/>
   <div>
-    <%= form.select :query, options_for_select(["King's Fall", 'Vault Of Glass', 'Vow of the Disciple', 'Deep Stone Crypt', 'Garden of Salvation', "Last Wish", "Spire of the Watcher", 'Duality', 'Grasp of Avarice', 'Prophecy', 'Pit of Heresy', 'Shattered Throne' ]) %>
-
-    <%= form.submit 'Search' %>
+    <%= form.select :query, options_for_select(["King's Fall", 
+    'Vault Of Glass', 
+    'Vow of the Disciple', 
+    'Deep Stone Crypt', 
+    'Garden of Salvation', 
+    "Last Wish", 
+    "Spire of the Watcher", 
+    'Duality', 
+    'Grasp of Avarice', 
+    'Prophecy', 
+    'Pit of Heresy', 
+    'Shattered Throne' ]) %>
+    <%= form.submit 'Search', class: "btn btn-light margin" %>
   </div>
 <% end %>
-<div id="post">
-    <% @posts.each do |post| %>
-        <%= render "posts/post", post: post, username: @users.find(post.user_id).username %>
-        <p>
-            <%= link_to "Details", post, class: "link_ul" %>
-        </p>
-    <% end %>
+<br>
+<br>
+<% @posts.each do |post| %>
+    <div class= "jumbotron jumbotron-fluid bg-secondary bg-opacity-50 box-format mx-2 mb-5">
+    <div id="post">
+      <%= render "posts/post", post: post, username: @users.find(post.user_id).username %>
+      <p>
+          <%= link_to "Details", post, class: "link_ul h4" %>
+      </p>
+    </div>
+    </div>
+<% end %>
+
 </div>
 

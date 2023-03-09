@@ -1,13 +1,18 @@
 <div id="<%= post %>">
   <p>
-    <strong>User:</strong>
+
+  <div class="display-4">
+    <%= post.activity %>
+  </div>
+    <br/>
+  <div class="lead">
+    <strong>Post by:</strong>
     <%= username %>
     <br/>
-    <strong>Activity:</strong>
-    <%= post.activity %>
     <br/>
-    <strong>Info:</strong>
+    <p class="h4">Description</p>
+    <br/>
     <%= post.info %>
-
+  </div>
   </p>
 </div>

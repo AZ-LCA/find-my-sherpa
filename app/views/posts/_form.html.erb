@@ -1,3 +1,4 @@
+<div class= "jumbotron jumbotron-fluid bg-secondary bg-opacity-50 box-format mx-2 mb-5 pb-5">
 <%= form_with(model: post) do |form|%>
   <br/>
   <% if post.errors.any? %>
@@ -15,14 +16,16 @@
     <%= form.hidden_field :user_id, value: current_user.id%>
   </div>
   <div>
-    <%= form.label :activity, style: "display: block"%>
+    <%= form.label :activity, style: "display: block", class: "lead"%>
     <%= form.select :activity, options_for_select(["King's Fall", 'Vault Of Glass', 'Vow of the Disciple', 'Deep Stone Crypt', 'Garden of Salvation', "Last Wish", "Spire of the Watcher", 'Duality', 'Grasp of Avarice', 'Prophecy', 'Pit of Heresy', 'Shattered Throne' ])%>
   </div>
   <div>
-    <%= form.label :info, style: "display: block"%>
-    <%= form.text_field :info%>
+    <%= form.label :info, style: "display: block", class: "lead"%>
+    <%= form.text_field :info, class: "form-control"%>
   </div>
+  </br>
   <div>
     <%= form.submit %>
   </div>
 <% end %>
+</div>
