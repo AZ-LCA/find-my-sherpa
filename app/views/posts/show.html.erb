@@ -1,7 +1,15 @@
+<div class = "container-fluid page-header header" >
 <h1>Post Details</h1>
-
+</div>
+<hr class="my-4">
+<br/>
+<div class= "container-fluid">
+<div class = "navbar justify-content-start h4 mx-2" >
 <%= link_to "Back To Sherpa Listings", pages_main_path, class: "link_ul"%>
-
+</div>
+<br/>
+<br/>
+<div class= "jumbotron jumbotron-fluid bg-secondary bg-opacity-50 box-format mx-2 mb-5">
 <%= render "post", post: @post, username: @user %>
 
 <% if current_user.username == @user %>
@@ -9,12 +17,20 @@
 <%= link_to "Edit Post", edit_post_path, class: "link_ul" %>
 
 <% end %>
+</div>
+<div class = "page-header header" >
 <h2>Comments:</h2>
+</div>
+<hr class="my-4">
+<div class="container-fluid">
 <% @comments.each do |comment| %>
 <% if comment.user_id != nil %>
 <%= render "comments/comment", comment: comment, username: @allUsers.find(comment.user_id).username  %>
 <% end %>
 <% end %>
-
-<h2>Add a comment:</h2>
+<div class= "jumbotron jumbotron-fluid bg-secondary bg-opacity-50 box-format mx-2 mb-5 pb-5">
+<h2 class="display-5">Add a comment:</h2>
 <%= render 'comments/form' %>
+</div>
+</div>
+</div>

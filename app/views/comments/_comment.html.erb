@@ -1,19 +1,19 @@
   
+<div class= "jumbotron jumbotron-fluid bg-secondary bg-opacity-50 box-format mx-2 mb-5 pt-1 pb-1">
+  <p class="lead">
+    <%= username%>
+  </p>
 
-  <p>
-    <strong>Commenter:</strong>
-    <%= username %>
+  <p class="my-4">
+    <%= comment.body%>
   </p>
 
   <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-
-  <p>
-    <%= link_to "Destroy Comment", [comment.post, comment], class: "link_ul", data: {
+  <%if current_user.id == comment.user_id%>
+    <%= link_to "Destroy Comment", [comment.post, comment], class: "link_ul h6", data: {
                   turbo_method: :delete,
                   turbo_confirm: "Are you sure?"
                 } %>
+  <%end%>
   </p>
-  
+  </div>
